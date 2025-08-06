@@ -17,7 +17,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Hello! I'm your test bot.")
 
 
-async def main():
+def main():
     application = Application.builder().token(os.getenv("TELEBOT_TOKEN")).build()
     application.add_handler(CommandHandler("start", start))
     application.add_handler(
